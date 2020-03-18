@@ -3,7 +3,6 @@ import pandas as pd
 df = pd.read_csv("PyPoll/Resources/election_data.csv")
 
 tot_votes = df.Candidate.count()
-
 winner = df.groupby('Candidate').count().County.idxmax()
 
 x = df.Candidate.unique()
