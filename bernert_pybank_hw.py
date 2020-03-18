@@ -1,9 +1,11 @@
 import pandas as pd
+import numpy as np
 
 df = pd.read_csv("PyBank/Resources/budget_data.csv")
 
 months = len(df)
 total = df["Profit/Losses"].sum()
+average = np.diff([df["Profit/Losses"]]).mean()
 
 maxindex = df["Profit/Losses"].idxmax()
 maxdate = df["Date"][maxindex]
@@ -17,6 +19,6 @@ print("Financial Analysis")
 print("-------------------------")
 print(f"Total Months: {months}")
 print(f"Total: ${total}")
-print(f"Average Change: WORK IN PROGRESS")
+print(f"Average Change: {average}")
 print(f"Greatest Increase in Profits: {maxdate} ${maxprofit}")
 print(f"Greatest Decrease in Profits: {mindate} ${minprofit}")
