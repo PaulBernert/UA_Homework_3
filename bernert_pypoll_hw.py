@@ -19,3 +19,13 @@ with open("PyPoll/bernert_pypoll_output.csv",'w') as f:
     f.write("-------------------------\n")
     f.write(f"Winner: {winner}\n")
     f.write("-------------------------\n")
+
+print("Election Results")
+print("-------------------------")
+print(f"Total Votes: {tot_votes}")
+print("-------------------------")
+for i in range(4):
+    print(f"{x[i]}: {y[i]}% ({z[i]})")
+print("-------------------------")
+print(f"Winner: {winner}")
+print("-------------------------")

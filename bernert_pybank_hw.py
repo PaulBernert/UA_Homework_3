@@ -22,3 +22,10 @@ with open("PyBank/bernert_pybank_output.csv",'w') as f:
     f.write(f"Average Change: {average}\n")
     f.write(f"Greatest Increase in Profits: {maxdate} ${maxprofit}\n")
     f.write(f"Greatest Decrease in Profits: {mindate} ${minprofit}\n")
+
+print("Financial Analysis")
+print("-------------------------")
+print(f"Total Months: {months}")
+print(f"Average Change: {average}")
+print(f"Greatest Increase in Profits: {maxdate} ${maxprofit}")
+print(f"Greatest Decrease in Profits: {mindate} ${minprofit}")
